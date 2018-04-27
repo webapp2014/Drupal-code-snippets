@@ -1,0 +1,9 @@
+<?php
+function mymodule_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id === 'user_form') {
+    $form['actions']['submit']['#submit'][] = '_mymodule_user_edit_form_submit';
+  } 
+} 
+function _mymodule_user_edit_form_submit($form, &$form_state) {
+  $form_state->setRedirect('entity.user.canonical', ['user' => \Drupal::currentUser()->id()]);
+} 
