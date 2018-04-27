@@ -20,3 +20,10 @@
       'headers' => $headers,
       'timeout' => 120,
     ])->getBody()->getContents();
+
+//TrustedRedirectResponse
+return new TrustedRedirectResponse('http://xxx.com');   
+
+//json data
+     $output[] = array();
+     return new JsonResponse($output);  
