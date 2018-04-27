@@ -5,7 +5,15 @@
   $redirect_uri = \Drupal::request()->getSchemeAndHttpHost() . Url::fromRoute('routing_name')->toString();
 
 //post
+    $data = [
+  		'arg1' => 333,
+  		'arg2' => 3444
+    ];
 
+    $headers = [
+      'Content-Type' => 'application/x-www-form-urlencoded'
+    ];
+    
     $response = \Drupal::httpClient()->post($url,[
       'verify' => FALSE,
       'form_params' => $data,
