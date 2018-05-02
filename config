@@ -1,0 +1,8 @@
+<?php
+
+//settings.php 同步备份文件的保存目录位置
+
+$config_directories['sync'] = 'sites/default/files/config_xxx'
+
+// drupal install with composer 
+// https://www.drupal.org/docs/develop/using-composer/using-composer-to-manage-drupal-site-dependencies
